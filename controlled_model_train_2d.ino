@@ -12,6 +12,7 @@
 // ver.2.b - force program to read just correct IR proximity sensor
 // ver.2.c - clean info on display in STOP 
 // ver.2.d - add information in english (until than all info was in romanian language)
+//           + improve IR detection (ignore detection at speed is zero
 
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
@@ -202,11 +203,11 @@ else
 {
   int ir_detected = HIGH;  // free
 
-   if ((train_dir1 == 1) and  (train_speed != 0))
+   if ((train_dir1 == 1) and (train_speed != 0))
    {
     ir_detected = digitalRead(IRD_A);
    } 
-   if ((train_dir2 == 1) and  (train_speed != 0))
+   if ((train_dir2 == 1) and (train_speed != 0))
    {
     ir_detected = digitalRead(IRD_B);
    }
