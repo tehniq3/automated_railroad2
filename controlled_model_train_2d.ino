@@ -202,11 +202,11 @@ else
 {
   int ir_detected = HIGH;  // free
 
-  if (train_dir1 == 1) 
+   if ((train_dir1 == 1) and  (train_speed != 0))
    {
     ir_detected = digitalRead(IRD_A);
    } 
-  if (train_dir2 == 1) 
+   if ((train_dir2 == 1) and  (train_speed != 0))
    {
     ir_detected = digitalRead(IRD_B);
    }
