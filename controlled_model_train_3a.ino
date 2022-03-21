@@ -138,6 +138,32 @@ void setup() {
   digitalWrite(DIR, LOW);
   digitalWrite(DIR2, LOW);
 
+  if (EEPROM.read(adresa) == checkok) 
+{
+  romana = EEPROM.read(adresa+1);
+  directie = EEPROM.read(adresa+2);
+  irpos = EEPROM.read(adresa+3);
+  staysec = EEPROM.read(adresa+4);
+  SPEED_MAX = EEPROM.read(adresa+5);
+  SPEED_MIN = EEPROM.read(adresa+6);
+  SPEED_DELTA = EEPROM.read(adresa+7);
+}
+else
+{
+  EEPROM.update(adresa, checkok);
+  EEPROM.update(adresa+1, romana);
+  EEPROM.update(adresa+2, directie);
+  EEPROM.update(adresa+3, irpos);
+  EEPROM.update(adresa+4, staysec);
+  EEPROM.update(adresa+5, SPEED_MAX);
+  EEPROM.update(adresa+6, SPEED_MIN);
+  EEPROM.update(adresa+7, SPEED_DELTA);
+  digitalWrite(LED_RED, HIGH);
+  delay(1000);
+  digitalWrite(LED_RED, LOW);
+}
+ STAY_TIME = staysec * 1000; 
+  
   lcd.init(); 
 lcd.createChar(0, shtop);
 lcd.createChar(1, fata);
@@ -179,32 +205,6 @@ lcd.createChar(2, spate);
   }
   delay(2000);
 lcd.clear();
-
-if (EEPROM.read(adresa) == checkok) 
-{
-  romana = EEPROM.read(adresa+1);
-  directie = EEPROM.read(adresa+2);
-  irpos = EEPROM.read(adresa+3);
-  staysec = EEPROM.read(adresa+4);
-  SPEED_MAX = EEPROM.read(adresa+5);
-  SPEED_MIN = EEPROM.read(adresa+6);
-  SPEED_DELTA = EEPROM.read(adresa+7);
-}
-else
-{
-  EEPROM.update(adresa, checkok);
-  EEPROM.update(adresa+1, romana);
-  EEPROM.update(adresa+2, directie);
-  EEPROM.update(adresa+3, irpos);
-  EEPROM.update(adresa+4, staysec);
-  EEPROM.update(adresa+5, SPEED_MAX);
-  EEPROM.update(adresa+6, SPEED_MIN);
-  EEPROM.update(adresa+7, SPEED_DELTA);
-  digitalWrite(LED_RED, HIGH);
-  delay(1000);
-  digitalWrite(LED_RED, LOW);
-}
- STAY_TIME = staysec * 1000; 
 }
 
 void loop() {
