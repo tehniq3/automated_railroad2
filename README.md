@@ -1,7 +1,13 @@
 # automated_railroad2
 improvements of https://github.com/tehniq3/automated_railroad
 
-article: https://nicuflorica.blogspot.com/2022/03/sistem-automat-pentru-control-deplasare_20.html
+articles:
+
+- https://nicuflorica.blogspot.com/2022/03/sistem-automat-pentru-control-deplasare_20.html
+
+- https://nicuflorica.blogspot.com/2022/03/sistem-automat-pentru-control-deplasare_27.html
+
+- http://arduinotehniq.blogspot.com/2022/03/arduino-automatic-model-train-2.html
 
 ![real_test](https://blogger.googleusercontent.com/img/a/AVvXsEirhTWok16pE224ysjMfx8RJk3uJWVdAdmq2LR6SQ6vDIeGzN1EuUH34YDvN1s4cofk9eudqeQXh5WdXKHOzOb1O0_n_LGfzGPSE6e6GzenoBAseSf1xULbu19VqC-CKCiQQmA8BoPZzXiDBM4uzKet1b4OTlLur4UQUO5Pn3Va7r3ENtuq2RUqBF-GGg=w200-h101)
 
