@@ -32,7 +32,7 @@ int SPEED_DELTA = 5;
 
 // pin conntection setups
 //
-#define IRD_A 7 // detector a
+#define IRD_A 5 // detector a
 #define IRD_B 6  // detector b
 #define LED_RED 13
 #define SPEED_PWM 10
